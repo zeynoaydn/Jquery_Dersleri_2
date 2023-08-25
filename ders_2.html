@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    
+</head>
+<body>
+    <h2>jquery eğitimi</h2>
+    <p>Merhaba Dünya</p>
+    <p>Hello World</p>
+    <div id="result">Deneme 1 2 3</div>
+    <p>UserName <input type="text" name="username" id="username"></p>
+    <p>Email <input type="email" name="email" id="email"></p>
+    <p>Metin: <span></span></p>
+    <button type="button" id="Btn">Click Me</button>
+    <button type="button" id="BtnOff">Click Me(off)</button>
+    <p id="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quidem qui facilis officia quis molestias ex consequuntur tempora cumque saepe.</p>
+    <button type="button" id="infoBtn">Tıkla ve Bilgiler Gelsin</button>
+    <p id="info"></p>
+    <script>
+       $(function(){
+        // $("p").mouseenter(function(){
+        //     alert("paragraf alanına girildi");
+        // });
+
+        // $("input").hover(function(){
+        //     $(this).css("background-color","red");
+        // });
+
+        var i=0;
+        $("input").keypress(function(){
+            $("span").text(i+=1);
+        });
+
+        // $("p").on("click",function(){
+        //     $("#result").css("color","red");
+        // })
+
+        $("#Btn").on("click",function(){
+            $(this).css("color","red");
+        })
+        //off, on işlemini iptal etti
+        $("#BtnOff").click(function(){
+            $("#Btn").off("click");
+        })
+
+        //bir kere çalışmasını sağladık
+        // $("#paragraf").on("click",function(){
+        //     $(this).animate({fontSize:"+=6px"});
+        // });
+        $("#paragraf").one("click",function(){
+            $(this).animate({fontSize:"+=6px"});
+        });
+
+        var obj={
+            name:"zeynep",
+            age:22,
+            test:function(){
+                $("#info").text("isim:"+this.name+"<br> yaş:"+this.age);
+            }
+        }
+        $("#infoBtn").click($.proxy(obj,"test"));
+       });
+    </script>
+</body>
+</html>

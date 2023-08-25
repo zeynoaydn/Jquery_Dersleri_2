@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    
+</head>
+<body>
+    <h2>Jquery Eğitimi</h2>
+    <p>Jquery Kullanımı</p>
+        <button type="button" id="hide">Hide</button>
+        <button type="button" id="show">Show</button>
+        <button type="button" id="toggle">Toggle</button>
+    <script>
+       $(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        })
+        $("#show").click(function(){
+            $("p").show();
+        })
+        $("#toggle").click(function(){
+            $("p").toggle();
+        })
+       });
+    </script>
+</body>
+</html>

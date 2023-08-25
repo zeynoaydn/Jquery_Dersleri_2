@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    
+</head>
+<body>
+
+    <h2 class="result">Merhaba Dünya</h2>
+    <p class="result">p result bana tıkla</p>
+
+    <p>bana tıkla</p>
+    <p>bana tıkla deneme</p>
+    <p>bana tıkla deneme 1 2 3</p>
+
+    <p>List 1</p>
+    <ul>
+        <li>Javascript</li>
+        <li>jquery</li>
+        <li>Angular</li>
+    </ul>
+
+    <p>List 2</p>
+    <ul>
+        <li>Javascript</li>
+        <li>jquery</li>
+        <li>Angular</li>
+    </ul>
+
+    <p><a href="#" target="_blank">jquery öğreniyorum</a></p>
+    <p><a href="#" >Javascript öğreniyorum</a></p>
+
+    <table border="1">
+        <tr>
+            <th>Software</th>
+            <th>Language</th>
+        </tr>
+        <tr>
+            <td>Javascript</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>Jquery</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>Angular</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>React</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>Vue</td>
+            <td>English</td>
+        </tr>
+    </table>
+
+    <div></div>
+    <div>
+        <p>Deneme 1 2</p>
+    </div>
+    <form>
+        <p>
+            <label>UserName </label>
+            <input type="text" id="username">
+        </p>
+        <p>
+            <label>Password </label>
+            <input type="password" id="password">
+        </p>
+        <p>
+            <label>Email </label>
+            <input type="email" id="email" value="deneme@gmail.com" disabled>
+        </p>
+        <p>
+            <label>Message </label>
+            <input id="message">
+        </p>
+        <p>
+            <input type="checkbox" id="agree">Sözleşmeyi Kabul Ediyorum
+        </p>
+        <p>
+            <label>
+                <input type="radio" name="radiogroup1" value="1" id="radiogroup1_0">Bay
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="radiogroup1" value="1" id="radiogroup1_0">Bayan
+            </label>
+        </p>
+        <p><input type="file"></p>
+        <p><input type="reset" value="clear"></p>
+        <p><input type="submit" value="send"></p>
+    </form>
+    <ul>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Yahoo</a></li>
+        <li><a href="#">Yandex</a></li>
+        <li><a href="#">Bing</a></li>
+    </ul>
+
+    <button type="button">Click Me</button>
+
+    <script>
+        $(document).ready(function(){
+            //p etiketlerini gizler
+            // $("p").click(function(){
+            //     $(this).hide();
+            // })
+
+            //butona basınca class ı result olanları gizler
+            // $("button").click(function(){
+            //     $(".result").hide();
+            // })
+
+            //butona basınca p etiketlerini gizler
+            // $("button").click(function(){
+            //     $("p").hide();
+            // })
+
+            //kendisini gizler
+            // $("button").click(function(){
+            //     $(this).hide();
+            // })
+
+            // $("button").click(function(){
+            //     $("p.result").hide();
+            // })
+
+            // $("button").click(function(){
+            //     $("ul li:first").hide();
+            // })
+            // $("button").click(function(){
+            //     $("ul li:first-child").hide();
+            // })
+
+            // $("button").click(function(){
+            //     $("[href]").hide();
+            // })
+
+            // $("button").click(function(){
+            //     $("tr:even").css("background-color","blue");
+            // })
+
+            // $("button").click(function(){
+            //     $(":button").css("background-color","blue").css("height","200px");
+            // })
+
+            // $("button").click(function(){
+            //     $("p:contains(Deneme)").css("background-color","blue").css("height","200px");
+            // })
+
+            // $("button").click(function(){
+            //     $("a:not(':contains(Yandex)')").css("background-color","red").css("height","200px");
+            // })
+
+            $("button").click(function(){
+                $(":disabled").css("background-color","red").css("height","200px");
+            })
+        })
+
+        // var obj=document.querySelector("p");
+        // obj.onclick=function(){
+        //     obj.style.display="none";
+        // }
+    </script>
+</body>
+</html>

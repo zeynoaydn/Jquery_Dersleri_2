@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    
+</head>
+<body>
+    <div>
+        <h2>Deneme</h2>
+    </div>
+    <p id="result"></p>
+    <button>Click</button>
+    <script>
+       $(function(){
+        $("button").click(function(){
+            $("div").load("demo.txt");
+        })
+       });
+    </script>
+</body>
+</html>
